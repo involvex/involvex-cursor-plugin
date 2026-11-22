@@ -1,0 +1,22 @@
+{
+  "name": "involvex-cursor-plugin",
+  "displayName": "Involvex Cursor Plugin",
+  "version": "0.1.0",
+  "description": "Involvex Cursor plugin with rules, skills, agents, commands, hooks, and MCP.",
+  "author": {
+    "name": "Involvex",
+    "email": "plugins@involvex.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "cursor",
+    "plugin",
+    "rules",
+    "skills",
+    "agents",
+    "commands",
+    "hooks",
+    "mcp"
+  ],
+  "logo": "assets/logo.svg"
+}

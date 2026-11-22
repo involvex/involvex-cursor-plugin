@@ -1,0 +1,20 @@
+{
+  "hooks": {
+    "afterFileEdit": [
+      {
+        "command": "./scripts/format-code.ps1"
+      }
+    ],
+    "beforeShellExecution": [
+      {
+        "command": "./scripts/validate-shell.ps1",
+        "matcher": "rm|curl|wget"
+      }
+    ],
+    "sessionEnd": [
+      {
+        "command": "./scripts/audit.ps1"
+      }
+    ]
+  }
+}

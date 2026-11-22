@@ -1,0 +1,12 @@
+.cline/remote-config/managed.json
+.cline/remote-config/cache/bundle.json
+node_modules/
+.cache/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.development
+.env.test
+.env.production

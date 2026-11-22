@@ -1,8 +1,8 @@
 {
   "name": "involvex-cursor-plugin",
   "displayName": "Involvex Cursor Plugin",
-  "version": "0.1.0",
-  "description": "Involvex Cursor plugin with rules, skills, agents, commands, hooks, and MCP.",
+  "version": "0.2.0",
+  "description": "Personal engineering kit for Cursor: coding rules, review and shipping skills, specialist agents, slash commands, and safety hooks.",
   "author": {
     "name": "Involvex",
     "email": "plugins@involvex.com"
@@ -16,7 +16,9 @@
     "agents",
     "commands",
     "hooks",
-    "mcp"
+    "engineering",
+    "conventional-commits",
+    "code-review"
   ],
   "logo": "assets/logo.svg"
 }

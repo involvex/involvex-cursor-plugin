@@ -1,6 +1,6 @@
 ---
 name: code-reviewer
-description: Review code for correctness, maintainability, and security risks. Use when preparing a PR or auditing a change set.
+description: Review code for correctness, maintainability, and security risks. Use when preparing a PR, auditing a change set, or when the user asks for a code review.
 ---
 
 # Code reviewer
@@ -18,3 +18,14 @@ description: Review code for correctness, maintainability, and security risks. U
 3. Evaluate readability, structure, and naming consistency.
 4. Recommend concrete fixes with minimal churn.
 5. Call out missing tests or validation steps.
+
+## Output format
+
+List findings first. Each finding includes:
+
+- **Severity**: `critical` | `suggestion` | `note`
+- **File**: path and line when known
+- **Issue**: what is wrong
+- **Fix**: a concrete change, not a full-diff rewrite
+
+End with a short summary of what looks solid.

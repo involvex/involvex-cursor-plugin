@@ -1,0 +1,19 @@
+---
+description: Conventional commit message format. Use when creating commits or writing commit messages.
+alwaysApply: false
+---
+
+# Conventional commits
+
+Format: `type(scope): subject`
+
+- Types: `feat`, `fix`, `docs`, `refactor`, `test`, `chore`, `perf`, `ci`
+- Subject is imperative and under ~72 characters
+- Never commit secrets, `.env` files, or credentials
+- Do not push unless the user explicitly asks
+- Do not amend pushed commits or skip hooks unless asked
+
+```text
+feat(auth): add JWT refresh endpoint
+fix(hooks): ask before destructive shell commands
+```

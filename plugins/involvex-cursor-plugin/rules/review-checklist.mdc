@@ -1,13 +1,12 @@
 ---
-description: Checklist used during implementation and review
+description: Checklist for implementation and code review. Use when reviewing changes, preparing a PR, or auditing a diff.
 alwaysApply: false
-globs:
-  - "**/*"
 ---
 
-review-checklist:
+# Review checklist
 
-- Confirm new behavior has clear examples or tests where practical.
-- Flag security-sensitive code paths for input validation review.
+- Confirm new behavior has tests or a clear manual verification path.
+- Flag security-sensitive paths for input validation, auth, and secret handling.
 - Check for breaking changes in APIs, config, or user workflows.
-- Ensure docs and migration notes are present for meaningful changes.
+- Ensure docs and migration notes exist for meaningful changes.
+- Prefer concrete findings with file paths over general advice.

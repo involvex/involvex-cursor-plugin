@@ -1,11 +1,3 @@
-// {
-//   "mcpServers": {
-//     "involvex-mcp-server": {
-//       "command": "bunx",
-//       "args": ["@involvex/mcp-server"],
-//       "env": {
-//         "INVOLVEX_MCP_SERVER_URL": "${INVOLVEX_MCP_SERVER_URL}"
-//       }
-//     }
-//   }
-// }
+{
+  "mcpServers": {}
+}

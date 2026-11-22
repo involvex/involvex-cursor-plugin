@@ -1,0 +1,16 @@
+---
+description: Conventions for writing and updating tests
+globs:
+  - "**/*.{test,spec}.{js,jsx,ts,tsx,mjs,cjs}"
+  - "**/__tests__/**"
+  - "**/tests/**"
+alwaysApply: false
+---
+
+# Tests
+
+- Prefer the project's existing test runner and patterns.
+- Cover the happy path and at least one failure or edge path.
+- Use clear assertion messages that name the expected behavior.
+- During a test-only task, edit test files unless the user asks for production fixes.
+- Keep fixtures small and deterministic; avoid live network calls.

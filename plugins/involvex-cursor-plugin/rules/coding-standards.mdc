@@ -3,9 +3,19 @@ description: Baseline coding standards for readable, maintainable changes
 alwaysApply: true
 ---
 
-coding-standards:
+# Coding standards
 
 - Prefer small, focused changes with a clear purpose.
+- Match the repository's existing naming, imports, and formatting.
 - Use descriptive names for functions, variables, and files.
 - Add concise comments only when non-obvious logic needs context.
+- Do not add drive-by dependencies or unrelated refactors.
 - Keep user-facing documentation updated when behavior changes.
+
+```ts
+// Prefer
+function loadUserProfile(userId: string) { ... }
+
+// Avoid
+function doIt(x: any) { ... }
+```

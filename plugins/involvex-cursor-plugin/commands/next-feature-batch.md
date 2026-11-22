@@ -1,9 +1,12 @@
 ---
 name: next-feature-batch
-description: Suggest what should be shipped as next feature batch for next release
+description: Suggest the next shippable feature batch for the upcoming release
 ---
 
-# Next Feature Batch
+# Next feature batch
 
-1. Analyze the repo
-2. Suggest what should be shipped as next feature batch for next release
+Follow the `release-batch` skill.
+
+1. Analyze recent commits, README, and open issues when available.
+2. Propose one shippable batch using the skill's template.
+3. Do not invent demand or fake issue numbers.

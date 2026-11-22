@@ -1,19 +1,20 @@
 {
+  "version": 1,
   "hooks": {
     "afterFileEdit": [
       {
-        "command": "./scripts/format-code.ps1"
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/scripts/format-after-edit.mjs\""
       }
     ],
     "beforeShellExecution": [
       {
-        "command": "./scripts/validate-shell.ps1",
-        "matcher": "rm|curl|wget"
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/scripts/gate-shell.mjs\"",
+        "matcher": "rm\\b|del\\b|Remove-Item|curl\\b|wget\\b|Invoke-WebRequest|force-with-lease|force\\b|--force|git\\s+reset\\s+--hard|git\\s+clean\\s+-f"
       }
     ],
-    "sessionEnd": [
+    "beforeReadFile": [
       {
-        "command": "./scripts/audit.ps1"
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/scripts/block-secrets.mjs\""
       }
     ]
   }

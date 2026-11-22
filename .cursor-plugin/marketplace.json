@@ -6,13 +6,13 @@
   },
   "metadata": {
     "description": "Involvex Cursor plugin marketplace",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "plugins": [
     {
       "name": "involvex-cursor-plugin",
       "source": "./plugins/involvex-cursor-plugin",
-      "description": "Full-featured plugin with rules, skills, agents, commands, hooks, and MCP"
+      "description": "Personal engineering kit: rules, skills, agents, commands, and safety hooks"
     }
   ]
 }

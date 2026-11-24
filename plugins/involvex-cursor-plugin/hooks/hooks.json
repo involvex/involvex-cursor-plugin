@@ -16,6 +16,22 @@
       {
         "command": "node \"${CURSOR_PLUGIN_ROOT}/scripts/block-secrets.mjs\""
       }
+    ],
+    "stop": [
+      {
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/scripts/continue-ship.mjs\"",
+        "loop_limit": 1
+      },
+      {
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/scripts/notify.mjs\""
+      }
+    ],
+    "subagentStop": [
+      {
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/scripts/continue-factory.mjs\"",
+        "matcher": "explorer|explore",
+        "loop_limit": 1
+      }
     ]
   }
 }

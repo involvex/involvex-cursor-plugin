@@ -1,0 +1,30 @@
+---
+description: Keep a portable root AGENTS.md updated for Cursor, OpenCode, and other agents
+alwaysApply: true
+---
+
+# AGENTS.md (portable)
+
+Every repo that agents work in should have a root `AGENTS.md`. Cursor and OpenCode both read it. Treat it as the handoff file when leaving Cursor Premium for OpenCode or a CLI.
+
+## Required sections
+
+```markdown
+# AGENTS.md
+
+## Commands
+## Layout
+## Conventions
+## Gotchas
+## Current work
+## Learned preferences
+## Learned workspace facts
+```
+
+## Update rules
+
+- After discovering a real build/test command, gotcha, or layout fact, update `AGENTS.md` in the same change.
+- Prefer short bullets (max ~12 per learned section). Deduplicate. No secrets, tokens, or personal data.
+- Point `## Current work` at `ROADMAP.md` when it exists; otherwise name the active branch or open PR.
+- Do not invent commands. Only write commands that were run successfully or found in the repo.
+- Keep OpenCode-compatible plain Markdown. No Cursor-only frontmatter in this file.

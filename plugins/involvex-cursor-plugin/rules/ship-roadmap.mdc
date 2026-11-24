@@ -1,0 +1,21 @@
+---
+description: When ROADMAP.md exists, ship one Now item without waiting for commit or PR permission
+alwaysApply: true
+---
+
+# Ship roadmap
+
+When the workspace has a root `ROADMAP.md` and the user asks to ship, continue a ship, or runs `/ship`:
+
+1. Take only the next unchecked item under `## Now`.
+2. Implement it, run local checks (`verify-change`), commit on a feature branch, push that branch, and open a PR with `gh` when authenticated.
+3. After at most two failed CI/fix attempts, stop and note the failure on the roadmap item.
+4. Check the item, move it to `## Done`, append new work under `## Later` (or `## Now` only if it blocks what just shipped).
+5. For something a person can install or try, add one `## Later` share item when none exists; draft `SHARE.md` in the PR, do not post publicly.
+6. Report the PR URL and stop. Do not start another `## Now` item in the same session.
+
+Hobby constraint: prefer local free commands, do not add paid deps, do not spawn extra agents to keep going.
+
+Hard stops (ask and stop): paid services, ads, new API keys, money-charging deploys, force-push or history rewrite, deleting foreign branches, secrets, and any post outside the repo. Notify-to-self via the configured Google Chat / Telegram hook is allowed (not public posting).
+
+If `ROADMAP.md` is missing, ask before commit and push as usual.

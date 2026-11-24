@@ -25,6 +25,7 @@ git commit -m "type(scope): subject" -m "Optional body."
 
 - Never update git config.
 - Never skip hooks (`--no-verify`) unless the user asks.
-- Never push unless the user explicitly asks.
+- Never push unless the user explicitly asks, **except** while shipping a `ROADMAP.md` item: then push the feature branch and open the PR without waiting.
 - Never amend a pushed commit.
+- Never force-push.
 - Warn before staging files that look like secrets.

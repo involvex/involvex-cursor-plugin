@@ -1,8 +1,8 @@
 {
   "name": "involvex-cursor-plugin",
   "displayName": "Involvex Cursor Plugin",
-  "version": "0.2.0",
-  "description": "Personal engineering kit for Cursor: coding rules, review and shipping skills, specialist agents, slash commands, and safety hooks.",
+  "version": "0.5.0",
+  "description": "Personal engineering kit: ROADMAP shipping, explore→build factory, portable AGENTS.md, stop-hook notify-to-self (Google Chat / Telegram), rules, skills, and safety hooks.",
   "author": {
     "name": "Involvex",
     "email": "plugins@involvex.com"
@@ -18,7 +18,15 @@
     "hooks",
     "engineering",
     "conventional-commits",
-    "code-review"
+    "code-review",
+    "roadmap",
+    "autonomous",
+    "agents-md",
+    "opencode",
+    "factory",
+    "notify",
+    "google-chat",
+    "telegram"
   ],
   "logo": "assets/logo.svg"
 }

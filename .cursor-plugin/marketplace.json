@@ -6,13 +6,13 @@
   },
   "metadata": {
     "description": "Involvex Cursor plugin marketplace",
-    "version": "0.2.0"
+    "version": "0.5.0"
   },
   "plugins": [
     {
       "name": "involvex-cursor-plugin",
       "source": "./plugins/involvex-cursor-plugin",
-      "description": "Personal engineering kit: rules, skills, agents, commands, and safety hooks"
+      "description": "ROADMAP shipping, explore→build factory, portable AGENTS.md, notify-to-self, rules, skills, agents, commands, and safety hooks"
     }
   ]
 }

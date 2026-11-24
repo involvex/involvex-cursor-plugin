@@ -9,10 +9,9 @@ When the workspace has a root `ROADMAP.md` and the user asks to ship, continue a
 
 1. Take only the next unchecked item under `## Now`.
 2. Implement it, run local checks (`verify-change`), commit on a feature branch, push that branch, and open a PR with `gh` when authenticated.
-3. After at most two failed CI/fix attempts, stop and note the failure on the roadmap item.
-4. Check the item, move it to `## Done`, append new work under `## Later` (or `## Now` only if it blocks what just shipped).
-5. For something a person can install or try, add one `## Later` share item when none exists; draft `SHARE.md` in the PR, do not post publicly.
-6. Report the PR URL and stop. Do not start another `## Now` item in the same session.
+3. Check the item, move it to `## Done`, append new work under `## Later` (or `## Now` only if it blocks what just shipped).
+4. For something a person can install or try, add one `## Later` share item when none exists; draft `SHARE.md` in the PR, do not post publicly.
+5. Report the PR URL and stop. Do not start another `## Now` item in the same session. Do not spend this Cursor turn watching CI — the OpenCode PR babysit hook owns further CI/conflict fixes (or `@cursor` escalation).
 
 Hobby constraint: prefer local free commands, do not add paid deps, do not spawn extra agents to keep going.
 

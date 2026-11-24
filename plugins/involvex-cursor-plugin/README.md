@@ -1,8 +1,8 @@
 # Involvex Cursor Plugin
 
-Personal engineering kit for Cursor: coding standards, autonomous roadmap shipping, explore→build factory, portable `AGENTS.md` for OpenCode handoff, notify-to-self on agent stop, slash commands, and safety hooks.
+Personal engineering kit for Cursor: coding standards, autonomous roadmap shipping, OpenCode PR babysit, explore→build factory, portable `AGENTS.md` for OpenCode handoff, notify-to-self on agent stop, slash commands, and safety hooks.
 
-Requires **Node.js** on `PATH` for hook scripts. Google Chat notify also needs `gws` on `PATH`.
+Requires **Node.js** on `PATH` for hook scripts. Google Chat notify also needs `gws` on `PATH`. PR babysit needs `opencode` on `PATH` and the always-on OpenCode service.
 
 ## Install locally
 
@@ -101,6 +101,21 @@ gws chat +send --space spaces/AAQAiK8Oa3Q --text "notify test"
 
 `auto` prefers Google Chat when `INVOLVEX_GWS_CHAT_SPACE` is set, else Telegram. `off` disables.
 
+## PR babysit (OpenCode on your always-on service)
+
+After a successful `gh pr create`, hooks hand the PR to OpenCode so Cursor can move on:
+
+1. `afterShellExecution` → `mark-pr.mjs` stores the PR URL.
+2. `stop` → `spawn-pr-babysit.mjs` detaches:
+
+```text
+opencode --server http://127.0.0.1:4000 run --auto --agent build --model kilo/kilo-auto/free …
+```
+
+OpenCode uses `gh` to watch checks, read failing logs, fix, and `git push` (never force). After two failed fix rounds it comments `@cursor …` on the PR and stops.
+
+Requires `opencode` on `PATH` and the background service (`opencode service status`). Opt out with `INVOLVEX_PR_BABYSIT=off` in `notify.env`. Logs: `~/.config/involvex/babysit/logs/`.
+
 ## Components
 
 ### Rules
@@ -154,7 +169,8 @@ gws chat +send --space spaces/AAQAiK8Oa3Q --text "notify test"
 | `afterFileEdit` | Format with workspace Prettier when available |
 | `beforeShellExecution` | Ask before destructive/network commands |
 | `beforeReadFile` | Block secret-looking file reads |
-| `stop` | Ship follow-up if paused on commit/push/PR ask; notify-to-self (gws/Telegram) |
+| `afterShellExecution` | Mark PR URL after `gh pr create` for babysit |
+| `stop` | Ship follow-up; notify-to-self; spawn OpenCode PR babysit |
 | `subagentStop` | One follow-up: explorer → builder during factory |
 
 ## MCP
@@ -169,7 +185,7 @@ Add real servers later with `${VAR}` placeholders and a matching `variables` sch
 
 ## Version
 
-`0.5.0`
+`0.6.0`
 
 ## License
 

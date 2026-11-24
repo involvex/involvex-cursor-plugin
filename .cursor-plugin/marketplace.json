@@ -6,13 +6,13 @@
   },
   "metadata": {
     "description": "Involvex Cursor plugin marketplace",
-    "version": "0.5.0"
+    "version": "0.6.0"
   },
   "plugins": [
     {
       "name": "involvex-cursor-plugin",
       "source": "./plugins/involvex-cursor-plugin",
-      "description": "ROADMAP shipping, explore→build factory, portable AGENTS.md, notify-to-self, rules, skills, agents, commands, and safety hooks"
+      "description": "ROADMAP shipping, OpenCode PR babysit, explore→build factory, portable AGENTS.md, notify-to-self, rules, skills, agents, commands, and safety hooks"
     }
   ]
 }

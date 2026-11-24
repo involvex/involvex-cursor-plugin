@@ -17,6 +17,12 @@
         "command": "node \"${CURSOR_PLUGIN_ROOT}/scripts/block-secrets.mjs\""
       }
     ],
+    "afterShellExecution": [
+      {
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/scripts/mark-pr.mjs\"",
+        "matcher": "gh\\s+pr\\s+create"
+      }
+    ],
     "stop": [
       {
         "command": "node \"${CURSOR_PLUGIN_ROOT}/scripts/continue-ship.mjs\"",
@@ -24,6 +30,9 @@
       },
       {
         "command": "node \"${CURSOR_PLUGIN_ROOT}/scripts/notify.mjs\""
+      },
+      {
+        "command": "node \"${CURSOR_PLUGIN_ROOT}/scripts/spawn-pr-babysit.mjs\""
       }
     ],
     "subagentStop": [

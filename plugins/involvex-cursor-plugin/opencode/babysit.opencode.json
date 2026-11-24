@@ -1,0 +1,33 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "_involvexBabysit": true,
+  "permissions": [
+    {
+      "action": "shell",
+      "resource": "git push *",
+      "effect": "allow"
+    },
+    {
+      "action": "shell",
+      "resource": "git push --force*",
+      "effect": "deny"
+    },
+    {
+      "action": "shell",
+      "resource": "git push --force-with-lease*",
+      "effect": "deny"
+    }
+  ],
+  "policies": [
+    {
+      "action": "tool.use",
+      "resource": "shell:git push *",
+      "effect": "allow"
+    },
+    {
+      "action": "tool.use",
+      "resource": "shell:git push --force*",
+      "effect": "deny"
+    }
+  ]
+}

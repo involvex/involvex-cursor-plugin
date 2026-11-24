@@ -31,10 +31,9 @@ Expected shape:
 3. Follow `verify-change`: run the narrowest existing local check. Fix failures caused by this change.
 4. Create or use a feature branch. Commit with a conventional message. Never commit secrets.
 5. Push the feature branch (`git push -u origin HEAD`). Open a PR with `gh` when `gh` is authenticated. Do not ask for permission to commit, push, or open the PR.
-6. If remote checks fail, debug and push again. After **two** failed fix attempts, stop, note the failure under the roadmap item, and report.
-7. Mark the item done (`- [x]`), move it under `## Done`. Append newly discovered work under `## Later`, or under `## Now` only when it blocks the item just shipped.
-8. If the shipped item is something a person can install or try, follow `hobby-share` (one Later share item + `SHARE.md` draft, no public posting).
-9. Report the PR URL (or branch name if no PR) and **stop**. Do not start another `## Now` item in this session.
+6. Mark the item done (`- [x]`), move it under `## Done`. Append newly discovered work under `## Later`, or under `## Now` only when it blocks the item just shipped.
+7. If the shipped item is something a person can install or try, follow `hobby-share` (one Later share item + `SHARE.md` draft, no public posting).
+8. Report the PR URL (or branch name if no PR) and **stop**. Do not watch CI in this Cursor turn — the OpenCode babysit hook (`spawn-pr-babysit.mjs`) owns further CI/conflict fixes and `@cursor` escalation. Do not start another `## Now` item in this session.
 
 ## Hard stops
 

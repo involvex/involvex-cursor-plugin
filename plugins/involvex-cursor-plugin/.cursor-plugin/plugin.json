@@ -1,8 +1,8 @@
 {
   "name": "involvex-cursor-plugin",
   "displayName": "Involvex Cursor Plugin",
-  "version": "0.5.0",
-  "description": "Personal engineering kit: ROADMAP shipping, explore→build factory, portable AGENTS.md, stop-hook notify-to-self (Google Chat / Telegram), rules, skills, and safety hooks.",
+  "version": "0.6.0",
+  "description": "Personal engineering kit: ROADMAP shipping, OpenCode PR babysit, explore→build factory, portable AGENTS.md, notify-to-self, rules, skills, and safety hooks.",
   "author": {
     "name": "Involvex",
     "email": "plugins@involvex.com"
@@ -26,7 +26,9 @@
     "factory",
     "notify",
     "google-chat",
-    "telegram"
+    "telegram",
+    "babysit",
+    "opencode"
   ],
   "logo": "assets/logo.svg"
 }
